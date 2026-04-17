@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-lime: #D1FF4D;
+  --color-true-black: #000000;
+  --color-surface: #121212;
+  --color-border-dim: #222222;
+  --color-text-dim: #888888;
+  
+  --shadow-glow: 0 0 15px rgba(209, 255, 77, 0.3);
+  
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-true-black text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .card-elegant {
+    @apply bg-surface border border-border-dim rounded-xl p-5;
+  }
+  
+  .label-micro {
+    @apply text-[10px] text-neon-lime uppercase tracking-[1.5px] mb-2 block font-bold;
+  }
+
+  .glow-border {
+    @apply border border-neon-lime/30 shadow-glow;
+  }
+  
+  .glow-text {
+    @apply text-neon-lime drop-shadow-[0_0_8px_rgba(209,255,77,0.5)];
+  }
+
+  .btn-primary {
+    @apply bg-neon-lime text-true-black font-semibold py-3 px-8 rounded-lg shadow-glow transition-all duration-200 hover:brightness-110 active:scale-95 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-white border border-border-dim py-3 px-8 rounded-lg transition-all duration-200 hover:bg-white/5 active:scale-95 flex items-center gap-2;
+  }
+}

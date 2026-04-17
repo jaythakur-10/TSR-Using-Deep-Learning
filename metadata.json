@@ -1,0 +1,8 @@
+{
+  "name": "Traffic Sign AI",
+  "description": "High-accuracy, real-time Traffic Sign Recognition System powered by Deep Learning (Gemini Vision).",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
